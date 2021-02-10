@@ -44,8 +44,8 @@ export default class App extends Component {
         <Header />
         <section className = "selection Form">
           <form>
-            <Selection value = {this.handleKeywordChange} selectionName = "Keyword" property = "keyword" imageData = {data} stateHandler = {this.handleKeywordChange}/>
-            <Selection value = {this.handleHornChange} selectionName = "Horns" property = "horns" imageData = {data} stateHandler = {this.handleHornChange}/>
+            <Selection selectionName = "Keyword" property = "keyword" imageData = {data} stateHandler = {this.handleKeywordChange}/>
+            <Selection selectionName = "Horns" property = "horns" imageData = {data} stateHandler = {this.handleHornChange}/>
           </form>
         </section>
         <ImageList imageData = {keyWordAndHornFilterData} />
