@@ -29,12 +29,12 @@ export default class App extends Component {
   
   render() {
     const keyWordFilterData = data.filter((dataObj) => {
-      if (this.state.keyword === '') return true;
+      if (this.state.keyword === '' || this.state.keyword === "all") return true;
       if(this.state.keyword === dataObj.keyword) return true;
       return false;
     });
     const keyWordAndHornFilterData = keyWordFilterData.filter((filterDataObj) => {
-      if (this.state.horns === '') return true;
+      if (this.state.horns === '' || this.state.horns === "all") return true;
       if (this.state.horns == filterDataObj.horns) return true; //eslint-disable-line
       return false;
     });
@@ -42,10 +42,12 @@ export default class App extends Component {
     return (
       <div className="App">
         <Header />
-        <section className = "selection Form">
+        <section className = "selection-form">
           <form>
-            <Selection value = {this.handleKeywordChange} selectionName = "Keyword" property = "keyword" imageData = {data} stateHandler = {this.handleKeywordChange}/>
-            <Selection value = {this.handleHornChange} selectionName = "Horns" property = "horns" imageData = {data} stateHandler = {this.handleHornChange}/>
+            Keyword: 
+            <Selection selectionName = "Keyword" property = "keyword" imageData = {data} stateHandler = {this.handleKeywordChange}/>
+            Horns: 
+            <Selection selectionName = "Horns" property = "horns" imageData = {data} stateHandler = {this.handleHornChange}/>
           </form>
         </section>
         <ImageList imageData = {keyWordAndHornFilterData} />

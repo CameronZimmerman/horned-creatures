@@ -7,7 +7,10 @@ export default class ImageItem extends Component {
     }
     render() {
         return (
-            <img className = "horn-image" alt = {this.props.description} src = {this.props.image} onError = {this.defaultImage}/>
+            <div className = "image-item">
+                <img className = "horn-image" alt = {this.props.description} src = {this.props.image} onError = {this.defaultImage}/>
+                <p>{this.props.title}</p>
+            </div>
         )
     }
 }

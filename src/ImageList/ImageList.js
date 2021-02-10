@@ -4,7 +4,10 @@ import ImageItem from '../ImageItem/ImageItem.js';
 export default class ImageList extends Component {
     render() {
         return (
-            this.props.imageData.map(imageObj => <ImageItem description = {imageObj.description} image = {imageObj.url}/>)
+            <div className = "image-list">
+                {this.props.imageData.map(imageObj => <ImageItem description = {imageObj.description} image = {imageObj.url} title = {imageObj.title}/>)}
+            </div>
+            
         )
     }
 }
