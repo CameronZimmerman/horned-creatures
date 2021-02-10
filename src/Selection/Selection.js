@@ -5,13 +5,7 @@ export default class Selection extends Component {
     imagePropertyArray = Array.from(new Set(this.imageDataArray.map(imageObj => imageObj[this.props.property])));
     render() {
         return (
-        
-            <select name = {this.props.selectionName}>
-            {
-
-                this.props.selectionName
-
-            }
+            <select name = {this.props.selectionName} onChange = {this.props.stateHandler}>
             {
                 this.imagePropertyArray.map(imageProperty => <option value = {imageProperty}>{imageProperty}</option>)
             }
