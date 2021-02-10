@@ -6,6 +6,7 @@ export default class Selection extends Component {
     render() {
         return (
             <select name = {this.props.selectionName} onChange = {this.props.stateHandler}>
+            <option value = "all">all</option>
             {
                 this.imagePropertyArray.map(imageProperty => <option value = {imageProperty}>{imageProperty}</option>)
             }

@@ -1,6 +1,64 @@
+html {
+  background-color: #bccad0;
+}
+html, body, #root, .App {
+  margin: 0;
+  padding: 0;
+}
 .App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.selection-form {
+  width: 60%;
+  max-width: 900px;
+  min-width: 100px;
+  display: flex;
+  justify-content: center;
+  background-color: #9ba8ae;
 }
 
+header {
+  padding: .5em;
+  font-size: 2em;
+}
+
+.selection-form form {
+  width: 15%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+select {
+  width: 100%;
+  margin: .5em;
+}
+
+.image-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1em;
+}
+
+.image-item p {
+  font-size: 1em;
+  width: 50%;
+  text-align: center;
+}
+
+.image-list {
+  justify-content: center;
+  display: flex;
+  flex-wrap:wrap;
+  width: 60%;
+  max-width: 900px;
+  min-width: 100px;
+  min-height: 200px;
+  background-color: #495054;
+}
 .horn-image {
   width: 150px; 
   height: 150px;
